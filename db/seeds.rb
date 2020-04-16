@@ -16,9 +16,9 @@ puts "Creating flats..."
   flat = Flat.create!(
     name: Faker::Movies::LordOfTheRings.location,
     address: Faker::Address.street_address,
-    description: Faker::Books::Lovecraft.sentence,
-    price_per_night: [100..1000].sample,
-    number_of_guests: [1..5].sample)
+    description: Faker::Lorem::paragraph,
+    price_per_night: [100, 200, 500, 1000].sample,
+    number_of_guests: [1, 2, 3, 4, 5].sample)
     puts "Created #{flat.name}, #{flat.description}, #{flat.price_per_night}"
 end
 

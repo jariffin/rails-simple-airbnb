@@ -1,8 +1,12 @@
 class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
 
+  def filter(input)
+    @flats = Flat.where("name LIKE '#{input}")
+  end
+
   def index
-    @flat = Flat.all
+    @flats = Flat.all
   end
 
   def new
