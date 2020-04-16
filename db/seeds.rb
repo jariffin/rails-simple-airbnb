@@ -13,7 +13,7 @@ Flat.destroy_all
 puts "Creating flats..."
 
 10.times do
-  flat = Flat.create(
+  flat = Flat.create!(
     name: Faker::Movies::LordOfTheRings.location,
     address: Faker::Address.street_address,
     description: Faker::Books::Lovecraft.sentence,
