@@ -1,19 +1,28 @@
 <div class="container">
-  <div class>
+
+
     <h1>All our Flats (<%= Flat.count %>)</h1>
+
     <%= link_to "List a new Flat", new_flat_path %>
+        <div class="row">
       <% @flats.each do |flat|%>
-        <div class="card">
-        <%= link_to "#{flat.name}", flat_path(flat) %>
-        <%= flat.address %>
-        <p><%= flat.number_of_guests %></p>
-        <p><%= flat.price_per_night %></p>
-        <%= link_to "More info", flat_path(flat) %>
-        <%= link_to "Edit", edit_flat_path(flat) %>
-        <%= link_to "Remove", flat_path(flat),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
-      </div>
-    <% end %>
-  </div>
+
+          <div class="card w-50">
+          <%= link_to "#{flat.name}", flat_path(flat) %>
+          <%= flat.address %>
+          <p>Guests: <%= flat.number_of_guests %></p>
+          <p>Price: <%= flat.price_per_night %></p>
+          <%= link_to "More info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat) %>
+          <%= link_to "Remove", flat_path(flat),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+          </div>
+
+       <% end %>
+       </div>
+
+
+
 </div>
+

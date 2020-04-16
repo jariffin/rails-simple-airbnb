@@ -3,7 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-gem 'font-awesome-rails'
+# Fontend
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
